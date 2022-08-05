@@ -9,6 +9,8 @@ class User < ApplicationRecord
          :confirmable, 
          :trackable
 
+  validates :username, presence: true, uniqueness: true
+
   private
 
   def after_confirmation
